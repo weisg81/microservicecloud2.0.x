@@ -1,0 +1,23 @@
+server: 
+  port: 3344 
+
+spring:
+  application:
+    name:  microservicecloud-config
+  cloud:
+    config:
+      server:
+        git:
+#          uri: git@github.com:weisg81/microservicecloud-config.git  #GitHub上面的git仓库名字
+          force-pull: true
+          default-label: master
+          uri: https://github.com/weisg81/microservicecloud-config
+#          uri: https://github.com/weisg81/microservicecloud-config
+#          username: ******
+#          password: ******
+eureka:
+  client:
+    fetch-registry: false       #是否向服务注册中心注册自己
+    register-with-eureka: false #是否检索服务
+
+
