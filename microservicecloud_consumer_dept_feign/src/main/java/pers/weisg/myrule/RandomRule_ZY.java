@@ -85,13 +85,11 @@ public class RandomRule_ZY extends AbstractLoadBalancerRule
 
 	}
 
-	@Override
 	public Server choose(Object key)
 	{
 		return choose(getLoadBalancer(), key);
 	}
 
-	@Override
 	public void initWithNiwsConfig(IClientConfig clientConfig)
 	{
 		// TODO Auto-generated method stub
