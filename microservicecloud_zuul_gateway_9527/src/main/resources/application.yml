@@ -21,9 +21,17 @@ zuul:
   routes: 
     mydept.serviceId: microservicecloud-dept
     mydept.path: /mydept/**
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds命令执行超时时间，默认1000ms
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000ms
 
 info:
   app.name: weisg-microcloud
   company.name: www.weisg.com
   build.artifactId: $project.artifactId$
-  build.version: $project.version$     
+  build.version: $project.version$
