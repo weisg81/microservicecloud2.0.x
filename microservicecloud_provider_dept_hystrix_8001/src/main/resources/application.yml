@@ -38,7 +38,16 @@ eureka:
   instance:
     instance-id: microservicecloud-dept8001-hystrix   #自定义hystrix相关的服务名称信息
     prefer-ip-address: true     #访问路径可以显示IP地址     
- 
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds命令执行超时时间，默认1000ms
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000ms
+
+
 info: 
   app.name: weisg-microservicecloud
   company.name: www.weisg.com
